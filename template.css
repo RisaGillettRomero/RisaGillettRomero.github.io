@@ -9,9 +9,11 @@
 
   #top{
     position:absolute;
-    top:45%;
-    left:35%;
-    font-size:6em;
+    top:30%;
+    left:30%;
+    max-width: 30%;
+    font-size:10vw;
+   
     color: antiquewhite;
   }
 
