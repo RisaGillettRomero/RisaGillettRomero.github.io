@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .flex-container {
+            display: flex;
+        }
+
+        .flex-container>div {
+            width: 200px;
+        }
+
+        div {
+            padding: 20px;
+            margin: 20px;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid;
+        }
+
+       #id {
+            width:100px;
+            height:100px;
+        }
+
+        #dropdown{
+            position: relative;
+        }
+        #content{
+            display: none;
+        }
+
+        #dropdown:hover #content{
+            display: block;
+        }
+
+        #feg > div{
+            width :100px;
+            height:100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id = "TOP" style = "background-color: darkgoldenrod;display: flex;">
+        <div style = "background-color: antiquewhite;width: max-content;"><a href = "#Lists">Lists</a></div>
+        
+        <div style = "background-color: antiquewhite;width: max-content;"><a href = "#Table">Table</a></div>
+        
+        <div style = "background-color: antiquewhite;width: max-content;"><a href = "#Position">Position Properties</a></div>
+        
+        
+        <div style = "background-color: antiquewhite;width: max-content;"><a href = "#Hide">Hiding Content</a></div>
+     
+        <div style = "background-color: antiquewhite;width: max-content;"><a href = "#Quiz">Quiz</a></div>
+   
+        <div style = "background-color: antiquewhite;width: max-content;"><a href = "#Semantic">Semantic Elements</a></div>
+   
+        <div style = "background-color: antiquewhite;width: max-content;"><a href = "#Flex">Flexboxs</a></div>
+   
+    </div>
+    <div id = "Lists" style="background-color: blanchedalmond; ">
+        <p>There are 3 kinds of lists. Ordered, Unordered, and Description.</p>
+
+        <div class="flex-container">
+            <div style="background-color:chocolate; width:200px;">
+                <ol>
+                    Ordered list
+                    <li>one</li>
+                    <li>two</li>
+                </ol>
+            </div>
+
+            <div style="background-color: coral; width:200px;">
+                <ul>
+                    Unordered list
+                    <li>one</li>
+                    <li>two</li>
+                </ul>
+            </div>
+
+            <div style="background-color: cornflowerblue; width:200px;">
+                <dt>Description List Title</dt>
+                <dd>item</dd>
+                <dd>item</dd>
+            </div>
+
+        </div>
+
+
+        <Dt>List-style-type
+        <dd>lower-latin, lower-alpha: a, b,c</dd>
+        <dd>lower-roman: i, ii, iii </dd>
+        <dd>square</dd>
+        <dd>decimal: numbered</dd>
+        <dd>upper-latin, upper-roman,upper-greek: uppercase counterparts</dd>
+        </Dt>
+
+        <br>list-style-image:url()
+        <br> <br>
+        <dt>list-style-position
+        <dd>inside: pushes text a little, 'inside' list item</dd>
+        <dd>outside: does not push text. 'outside' list item</dd>
+        </dt>
+    </div>
+
+    <div id = "Table" style="background-color: blanchedalmond; ">
+
+        <p>Table</p>
+
+        <div class="flex-container">
+            <div style="background-color: darkolivegreen;">
+                <table>
+                    <tr>
+                        <th>Column1</th>
+                        <th>Column 2</th>
+                    </tr>
+                    <tr>
+                        <td>0</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>0</td>
+                        <td>1</td>
+                    </tr>
+                </table>
+
+                <p>Table using tr, th, td</p>
+            </div>
+
+            <div style="background-color:darkslategrey">
+                <table>
+                    <caption>Caption</caption>
+                    <thead>
+                        <tr>
+                            <th>column</th>
+                            <th>column</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>row</td>
+                            <td>row</td>
+                        </tr>
+                        <tr>
+                            <td>row</td>
+                            <td>row</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <p>Table using caption, thead, tbody, tr,th,td</p>
+            </div>
+
+            <div style="background-color: darksalmon;">
+                <table>
+                    <tr>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">4</td>
+                        <td rowspan="2">5</td>
+                        <td>6</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>8</td>
+                        <td>9</td>
+                    </tr>
+                </table>
+
+                <p>Table where colspan and rowspan are used</p>
+            </div>
+
+        </div>
+
+        <p> Tags:<br>table <br>table header (th) : bold<br>table data (th)<br>caption: above table
+            <br>table row(tr)<br>colspan: makes the data cell x amount of columns wide
+            <br>rowspan: makes the data cell x amount of rows long
+            <br>Colgroup:<a href="https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_colgroup_test">How colgroup
+                is used</a>
+        </p>
+    </div>
+
+     <div  id = "Position" style="background-color: blanchedalmond;position: relative; ">
+        <p>Position properties. There are 4: static, relative, absolute, fixed.
+
+            <br>Static: in position of normal flow 
+            <br>Relative: in relation to position of normal flow
+            <br>Absolute: in relation to its nearest positioned ancestor
+            <br>Fixed: specific position even when the window is scrolled
+        </p>
+
+        <div id = "id" style = "background-color:darkkhaki;position: static;"> This is static</div>
+        <div  id = "id" style = "background-color: deepskyblue;position: relative;">This is relative
+        
+            <div   style = "background-color:darksalmon;position: absolute;top:80px;left:0px;width:80px;height: 30px;padding: 0;margin: 0;">absolute</div>
+
+        </div>
+        <div style = "position: fixed;background-color:aqua;padding:0;margin:0;bottom:0;right:0;">
+            This is fixed
+            <br><a href = "#TOP">Back to Top</a>
+        </div>
+     
+        <p>Top<br>Left<br>Right<br>Bottom<br>Position tag</p>
+     </div>
+
+     <div id = "Hide" style = "background-color: blanchedalmond;">
+        Display tag: none, inline, inline block, block
+
+        <div id = "dropdown">
+            <h3>Dropdown</h3>
+
+            <div id = "content" >
+               Hidden content
+             </div>
+
+            Words<br>Words<br>Words
+        </div>
+
+        <p>For this display to work properly, the content to be hidden must be a child of the parent. 
+            <br>e.g a div within a div, but NOT a div within h3
+        </p>
+
+        <div style = "background-color: aqua;visibility:hidden;">
+        A <br>lot<br>of<br>space
+        </div>
+        Text after visible:hidden content
+  
+
+    <p>Something can still take up space when hidden with visibility attribute.
+        <br>The display attribute removes the content and the space for the content
+    </p>
+
+</div>
+
+<div id = "Quiz" style = "background-color: blanchedalmond;">
+    <h3>Quiz</h3>
+
+     
+<br><br>Use <b>static</b>positioning to move an element to a location in relation to where it would normally appear when rendered by a browser.
+<br><br><b>display: none;</b> hides an element as if the element is not there in the page..
+ <br><br>Which of the following turns all texts within heading 2 into uppercase letters?
+<b>text-transform: uppercase;</b>
+ <br><br>Which type of list is more appropriate to create a glossary of terms?
+<b>description list</b>
+<br><br>Which of the following allows the dropdown content (.content) to be shown when the user moves the mouse over an element (.dropdown)?
+<b>.dropdown:hover .content { display:block;}</b>
+ <br><br>Which of the following CSS rules would add a background color to all odd table rows?
+<b>tr:nth-child(odd) { background-color: aqua; }</b>
+ 
+<br><br>Provide the HTML code for the following table.
+
+<br><br>Captionless Image
+<table>
+          <tr><th>Account</th>    <th>Starting Balance </th> <th>Expenditures</th> 
+          <th>Remaining</th></tr>
+  
+          <tr> <td>324014 </td>  <td> $2990.55</td> <td> $550.55 </td> <td>$2440.00 </td> 
+         </tr>
+
+</table>
+ 
+<br><br>The caption element of a table <b>must be placed immediately after &lt;table&gt; if existed</b>
+
+<br><br>Which CSS property must be modified to have an ordered list with Greek numbering?
+<b>list-style-type</b>
+</div>
+
+<div id = "Semantic" style="background-color: blanchedalmond;">
+    <h3>Semantic Elements</h3>
+    <ul>
+        <li>Header</li>
+        <li>Footer</li>
+        <li>Main</li>
+        <li>Section</li>
+        <li>Article</li>
+        <li>Figure (picture)</li>
+        <li>Figcaption (description about figure)</li>
+        <li>Aside (to the side, additional information)</li>
+        <li>Nav (set of links) </li>
+        <li>Time</li>
+        <li>Summary</li>
+        <li>Details</li>
+    </ul>
+
+    <section style = "background-color: darkgray;float:left;">Section</section>
+
+    <p>Can make these elements float left or right with float attribute </p>
+</div>
+
+<div style ="background-color: blanchedalmond;">
+   <h3 id = "Flex">Flexbox</h3>  
+
+   <div id = "feg" style = "display: flex; flex-direction: row;  height:400px; 
+   background-color:rgb(192, 177, 250);align-items:start; ">
+   <div style = "background-color: red;">1</div>
+    <div style = "background-color: yellow;">2</div>
+    <div style = "background-color: orange;">3</div>
+    <div style = "background-color: green">4</div>
+    <div style = "background-color: blue;">5</div>
+    <div style = "background-color: purple;">6</div>
+</div>
+
+<p>flex-direction: row, column, or reverse of both
+    <br>flex-wrap: wrap, wrap-reverse
+    <br>justify-content:space-around, space-between etc. if a row, adjusts on x axis. if a column, adjusts on y axis.
+    <br><a href = "https://www.w3schools.com/cssref/playdemo.php?filename=playcss_justify-content">Visual depiction of justify-content</a>
+    <br>align-items: adjusts on cross axis (on the opposite axis).stretch. 
+    <br><a href = "https://www.w3schools.com/cssref/playdemo.php?filename=playcss_align-items&preval=flex-end">Visual deptiction of align-items</a>
+    <br>flexgrow
+    <br>flexshrink
+    <br>align self
+    <br> CONTINUE HERE TMRO. link w3 to all of these until you understand. also do forms
+</p>
+
+</div>
+</body>
+
+</html>
