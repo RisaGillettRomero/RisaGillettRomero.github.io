@@ -22,48 +22,79 @@
             border: 1px solid;
         }
 
-       #id {
-            width:100px;
-            height:100px;
+        #id {
+            width: 100px;
+            height: 100px;
         }
 
-        #dropdown{
+        #dropdown {
             position: relative;
         }
-        #content{
+
+        #content {
             display: none;
         }
 
-        #dropdown:hover #content{
+        #dropdown:hover #content {
             display: block;
         }
 
-        #feg > div{
-            width :100px;
-            height:100px;
+        #feg>div {
+            width: 50px;
+            height: 50px;
+        }
+
+        #nth li:nth-child(odd) {
+            color: blue;
+        }
+
+        #grow {
+            display: flex;
+            flex-direction: row;
+        }
+
+        #grow div:nth-of-type(1) {
+            flex-grow: 1;
+        }
+
+        #grow div:nth-of-type(2) {
+            flex-grow: 2;
+        }
+
+        #grow div:nth-of-type(3) {
+            flex-grow: 1;
+        }
+
+        #grow div:nth-of-type(4) {
+            flex-grow: 4;
+        }
+
+        #grow div:nth-of-type(5) {
+            flex-grow: 1;
         }
     </style>
 </head>
 
 <body>
-    <div id = "TOP" style = "background-color: darkgoldenrod;display: flex;">
-        <div style = "background-color: antiquewhite;width: max-content;"><a href = "#Lists">Lists</a></div>
-        
-        <div style = "background-color: antiquewhite;width: max-content;"><a href = "#Table">Table</a></div>
-        
-        <div style = "background-color: antiquewhite;width: max-content;"><a href = "#Position">Position Properties</a></div>
-        
-        
-        <div style = "background-color: antiquewhite;width: max-content;"><a href = "#Hide">Hiding Content</a></div>
-     
-        <div style = "background-color: antiquewhite;width: max-content;"><a href = "#Quiz">Quiz</a></div>
-   
-        <div style = "background-color: antiquewhite;width: max-content;"><a href = "#Semantic">Semantic Elements</a></div>
-   
-        <div style = "background-color: antiquewhite;width: max-content;"><a href = "#Flex">Flexboxs</a></div>
-   
+    <div id="TOP" style="background-color: darkgoldenrod;display: flex;">
+        <div style="background-color: antiquewhite;width: max-content;"><a href="#Lists">Lists</a></div>
+
+        <div style="background-color: antiquewhite;width: max-content;"><a href="#Table">Table</a></div>
+
+        <div style="background-color: antiquewhite;width: max-content;"><a href="#Position">Position Properties</a>
+        </div>
+
+
+        <div style="background-color: antiquewhite;width: max-content;"><a href="#Hide">Hiding Content</a></div>
+
+        <div style="background-color: antiquewhite;width: max-content;"><a href="#Quiz">Quiz</a></div>
+
+        <div style="background-color: antiquewhite;width: max-content;"><a href="#Semantic">Semantic Elements</a></div>
+
+        <div style="background-color: antiquewhite;width: max-content;"><a href="#Flex">Flexboxs</a></div>
+
     </div>
-    <div id = "Lists" style="background-color: blanchedalmond; ">
+    <div id="Lists" style="background-color: blanchedalmond; ">
         <p>There are 3 kinds of lists. Ordered, Unordered, and Description.</p>
 
         <div class="flex-container">
@@ -108,7 +139,7 @@
         </dt>
     </div>
 
-    <div id = "Table" style="background-color: blanchedalmond; ">
+    <div id="Table" style="background-color: blanchedalmond; ">
 
         <p>Table</p>
 
@@ -188,141 +219,196 @@
         </p>
     </div>
 
-     <div  id = "Position" style="background-color: blanchedalmond;position: relative; ">
+    <div id="Position" style="background-color: blanchedalmond;position: relative; ">
         <p>Position properties. There are 4: static, relative, absolute, fixed.
 
-            <br>Static: in position of normal flow 
+            <br>Static: in position of normal flow
             <br>Relative: in relation to position of normal flow
             <br>Absolute: in relation to its nearest positioned ancestor
             <br>Fixed: specific position even when the window is scrolled
         </p>
 
-        <div id = "id" style = "background-color:darkkhaki;position: static;"> This is static</div>
-        <div  id = "id" style = "background-color: deepskyblue;position: relative;">This is relative
-        
-            <div   style = "background-color:darksalmon;position: absolute;top:80px;left:0px;width:80px;height: 30px;padding: 0;margin: 0;">absolute</div>
+        <div id="id" style="background-color:darkkhaki;position: static;"> This is static</div>
+        <div id="id" style="background-color: deepskyblue;position: relative;">This is relative
+
+            <div
+                style="background-color:darksalmon;position: absolute;top:80px;left:0px;width:80px;height: 30px;padding: 0;margin: 0;">
+                absolute</div>
 
         </div>
-        <div style = "position: fixed;background-color:aqua;padding:0;margin:0;bottom:0;right:0;">
+        <div style="position: fixed;background-color:aqua;padding:0;margin:0;bottom:0;right:0;">
             This is fixed
-            <br><a href = "#TOP">Back to Top</a>
+            <br><a href="#TOP">Back to Top</a>
         </div>
-     
-        <p>Top<br>Left<br>Right<br>Bottom<br>Position tag</p>
-     </div>
 
-     <div id = "Hide" style = "background-color: blanchedalmond;">
+        <p>Top<br>Left<br>Right<br>Bottom<br>Position tag</p>
+    </div>
+
+    <div id="Hide" style="background-color: blanchedalmond;">
         Display tag: none, inline, inline block, block
 
-        <div id = "dropdown">
+        <div id="dropdown">
             <h3>Dropdown</h3>
 
-            <div id = "content" >
-               Hidden content
-             </div>
+            <div id="content">
+                Hidden content
+            </div>
 
             Words<br>Words<br>Words
         </div>
 
-        <p>For this display to work properly, the content to be hidden must be a child of the parent. 
+        <p>For this display to work properly, the content to be hidden must be a child of the parent.
             <br>e.g a div within a div, but NOT a div within h3
         </p>
 
-        <div style = "background-color: aqua;visibility:hidden;">
-        A <br>lot<br>of<br>space
+        <div style="background-color: aqua;visibility:hidden;">
+            A <br>lot<br>of<br>space
         </div>
         Text after visible:hidden content
-  
 
-    <p>Something can still take up space when hidden with visibility attribute.
-        <br>The display attribute removes the content and the space for the content
-    </p>
 
-</div>
+        <p>Something can still take up space when hidden with visibility attribute.
+            <br>The display attribute removes the content and the space for the content
+        </p>
 
-<div id = "Quiz" style = "background-color: blanchedalmond;">
-    <h3>Quiz</h3>
-
-     
-<br><br>Use <b>static</b>positioning to move an element to a location in relation to where it would normally appear when rendered by a browser.
-<br><br><b>display: none;</b> hides an element as if the element is not there in the page..
- <br><br>Which of the following turns all texts within heading 2 into uppercase letters?
-<b>text-transform: uppercase;</b>
- <br><br>Which type of list is more appropriate to create a glossary of terms?
-<b>description list</b>
-<br><br>Which of the following allows the dropdown content (.content) to be shown when the user moves the mouse over an element (.dropdown)?
-<b>.dropdown:hover .content { display:block;}</b>
- <br><br>Which of the following CSS rules would add a background color to all odd table rows?
-<b>tr:nth-child(odd) { background-color: aqua; }</b>
- 
-<br><br>Provide the HTML code for the following table.
-
-<br><br>Captionless Image
-<table>
-          <tr><th>Account</th>    <th>Starting Balance </th> <th>Expenditures</th> 
-          <th>Remaining</th></tr>
-  
-          <tr> <td>324014 </td>  <td> $2990.55</td> <td> $550.55 </td> <td>$2440.00 </td> 
-         </tr>
-
-</table>
- 
-<br><br>The caption element of a table <b>must be placed immediately after &lt;table&gt; if existed</b>
-
-<br><br>Which CSS property must be modified to have an ordered list with Greek numbering?
-<b>list-style-type</b>
-</div>
-
-<div id = "Semantic" style="background-color: blanchedalmond;">
-    <h3>Semantic Elements</h3>
-    <ul>
-        <li>Header</li>
-        <li>Footer</li>
-        <li>Main</li>
-        <li>Section</li>
-        <li>Article</li>
-        <li>Figure (picture)</li>
-        <li>Figcaption (description about figure)</li>
-        <li>Aside (to the side, additional information)</li>
-        <li>Nav (set of links) </li>
-        <li>Time</li>
-        <li>Summary</li>
-        <li>Details</li>
-    </ul>
-    <div style = "background-color: darkcyan;height:200px;">
-        <section style = "background-color: darkgray;float:left;">Section</section>
     </div>
 
+    <div id="Quiz" style="background-color: blanchedalmond;">
+        <h3>Quiz</h3>
 
-    <p>Can make these elements float left or right with float attribute </p>
-</div>
 
-<div style ="background-color: blanchedalmond;">
-   <h3 id = "Flex">Flexbox</h3>  
+        <br><br>Use <b>static</b>positioning to move an element to a location in relation to where it would normally
+        appear when rendered by a browser.
+        <br><br><b>display: none;</b> hides an element as if the element is not there in the page..
+        <br><br>Which of the following turns all texts within heading 2 into uppercase letters?
+        <b>text-transform: uppercase;</b>
+        <br><br>Which type of list is more appropriate to create a glossary of terms?
+        <b>description list</b>
+        <br><br>Which of the following allows the dropdown content (.content) to be shown when the user moves the mouse
+        over an element (.dropdown)?
+        <b>.dropdown:hover .content { display:block;}</b>
+        <br><br>Which of the following CSS rules would add a background color to all odd table rows?
+        <b>tr:nth-child(odd) { background-color: aqua; }</b>
 
-   <div id = "feg" style = "display: flex; flex-direction: row;  height:400px; 
-   background-color:rgb(192, 177, 250);align-items:start; ">
-   <div style = "background-color: red;">1</div>
-    <div style = "background-color: yellow;">2</div>
-    <div style = "background-color: orange;">3</div>
-    <div style = "background-color: green">4</div>
-    <div style = "background-color: blue;">5</div>
-    <div style = "background-color: purple;">6</div>
-</div>
+        <br><br>Provide the HTML code for the following table.
 
-<p>flex-direction: row, column, or reverse of both
-    <br>flex-wrap: wrap, wrap-reverse
-    <br>justify-content:space-around, space-between etc. if a row, adjusts on x axis. if a column, adjusts on y axis.
-    <br><a href = "https://www.w3schools.com/cssref/playdemo.php?filename=playcss_justify-content">Visual depiction of justify-content</a>
-    <br>align-items: adjusts on cross axis (on the opposite axis).stretch. 
-    <br><a href = "https://www.w3schools.com/cssref/playdemo.php?filename=playcss_align-items&preval=flex-end">Visual deptiction of align-items</a>
-    <br>flexgrow
-    <br>flexshrink
-    <br>align self
-    <br> CONTINUE HERE TMRO. link w3 to all of these until you understand. also do forms
-</p>
+        <br><br>Captionless Image
+        <table>
+            <tr>
+                <th>Account</th>
+                <th>Starting Balance </th>
+                <th>Expenditures</th>
+                <th>Remaining</th>
+            </tr>
 
-</div>
+            <tr>
+                <td>324014 </td>
+                <td> $2990.55</td>
+                <td> $550.55 </td>
+                <td>$2440.00 </td>
+            </tr>
+
+        </table>
+
+        <br><br>The caption element of a table <b>must be placed immediately after &lt;table&gt; if existed</b>
+
+        <br><br>Which CSS property must be modified to have an ordered list with Greek numbering?
+        <b>list-style-type</b>
+    </div>
+
+    <div id="Semantic" style="background-color: blanchedalmond;">
+        <h3>Semantic Elements</h3>
+        <ul>
+            <li>Header</li>
+            <li>Footer</li>
+            <li>Main</li>
+            <li>Section</li>
+            <li>Article</li>
+            <li>Figure (picture)</li>
+            <li>Figcaption (description about figure)</li>
+            <li>Aside (to the side, additional information)</li>
+            <li>Nav (set of links) </li>
+            <li>Time (doesn't render anything special)</li>
+            <li>Summary</li>
+            <li>Details</li>
+        </ul>
+        <div style="background-color: rgb(186, 229, 229);height:500px;">
+            <section>Section</section>
+            <time> 10:00pm</time>
+            <details>
+                <summary>Summary</summary>
+                <p>details</p>
+            </details>
+
+            <figure style="float:right;">
+                <img src="sunflower.gif">
+                <figcaption>Sunflower figcaption</figcaption>
+            </figure>
+
+        </div>
+
+        <p>Can make these elements float left or right with float attribute </p>
+    </div>
+
+    <div style="background-color: blanchedalmond;">
+        <h3 id="Flex">Flexbox</h3>
+
+        <div id="feg" style="display: flex;  height:400px; background-color:rgb(192, 177, 250); 
+        flex-direction:row;
+        
+        ">
+            <div style="background-color: red;">1</div>
+            <div style="background-color: yellow;">2</div>
+            <div style="background-color: orange;">3</div>
+            <div style="background-color: green">4</div>
+            <div style="background-color: blue;">5</div>
+            <div style="background-color: purple;">6</div>
+        </div>
+
+        <p>flex-direction: row, column, or reverse of both
+            <br>flex-wrap: wrap, wrap-reverse
+            <br><br>justify-content:space-around, space-between etc. if a row, adjusts on x axis. if a column, adjusts
+            on y
+            axis.
+            <br><a href="https://www.w3schools.com/cssref/playdemo.php?filename=playcss_justify-content">Visual
+                depiction of justify-content</a>
+            <br><br>align-items: adjusts on cross axis (on the opposite axis).stretch, flex-start, flex-end
+            <br><a
+                href="https://www.w3schools.com/cssref/playdemo.php?filename=playcss_align-items&preval=flex-end">Visual
+                depiction of align-items</a>
+            <br><br><a href="https://www.w3schools.com/cssref/tryit.php?filename=trycss3_flex-grow">flexgrow</a>
+            (specify 1 of itself then specify the one to grow. e.g a is flexgrow1, b is flexgrow 2. b is 2x as big as a)
+        <div id="grow" style="background-color: burlywood;">
+            <div style="background-color:coral;"></div>
+            <div style="background-color:lightblue;"></div>
+            <div style="background-color:khaki;"></div>
+            <div style="background-color:pink;"></div>
+            <div style="background-color:lightgrey;"></div>
+        </div>
+        <br><a href="https://www.w3schools.com/cssref/tryit.php?filename=trycss3_flex-shrink">flexshrink </a>(specify 1
+        of itself. then specify the one to shrink. e.g a is flexshrink 1, b is flex shrink 2. b is half the size of a)
+        <br>align self
+        <br><br>
+        <a href="https://www.w3schools.com/cssref/tryit.php?filename=trycss3_nth-of-type">nth-of -type usage</a>
+        (selector can be used by itself, specify odd, specify child in order, used with element)
+        <div id="nth">
+            <ol>
+                <li>item</li>
+                <li>item</li>
+                <li>item</li>
+                <li>item</li>
+                <li>item</li>
+            </ol>
+        </div>
+        <br> <a href = "https://www.w3schools.com/cssref/playdemo.php?filename=playcss_align-self&preval=auto">alignself</a> (can you even center a div bro) (basically align item but for one item)
+        <div style="background-color:cadetblue ;width:200px;height:500px;display:flex;">
+            <div style="background-image:url(rick.PNG);  width:50px;height:50px;align-self: center;"></div>
+        </div>
+
+        <p>USE PERCENTAGES WITH THESE, so that the windowsize adapts with screen size</p>
+        </p>
+
+    </div>
 </body>
 
 </html>
