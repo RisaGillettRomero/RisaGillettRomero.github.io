@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        h1 {
+            font-size: 3em;
+            padding: 10px;
+            line-height: 150%;
+        }
+        header{
+            background-color: darkblue;
+            color:white;
+            background-image:url(bigfish.gif);
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        ul{
+            list-style-type: none;
+            
+        }
+        a{
+            text-decoration: none;
+            
+        }
+        a:any-link
+        {
+            color: white;
+        }
+
+        .menu{
+            position: relative;
+        }
+        .submenu{
+            display:none
+        }
+        .menu:hover .submenu{
+            display:block;
+            border: 1px;
+            border-color:black;
+            border-style: solid;
+            padding: 10px;
+            background-image:url(bigfish.gif);
+        }
+
+        main{
+            margin-left:180px;
+            padding-right: 20px;
+            padding-bottom: 20px;
+        }
+
+        footer{
+            padding: 10px;
+            margin-left:180px;
+            background-color: aquamarine;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Fish Creek Animal Center</h1>
+    </header>
+
+    <nav style = "background-color: cornflowerblue;color:white;">
+    <ul style = "display:flex;flex-direction: row; justify-content: space-evenly;  ">
+        <li><a href="index.html">Home</a></li>
+        <li class="menu"><a href="services.html">Services</a>
+            <ul class="submenu" >
+                <li><a href="boarding.html">Pet Boarding</a></li>
+                <li><a href="training.html">Dog Training</a></li>
+                <li><a href="stores.html">Stores </a> </li>
+            </ul>
+         </li>
+        <li><a href="askvet.html">Ask the Vet</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+    </nav>
+
+    <main>
+    <h2>Contact Fish Creek</h2>
+    <p>Required fields are marked with an asterisk (*).</p>
+    <form method ="post" action = "animal.php">
+        <label>Name</label>
+        <input type = "name" name = "name">
+        <br>
+        <label>Email</label>
+        <input type = "email" name = "email">
+        <br>
+        <label>Animals owned</label>
+        <input type = "checkbox" name = "Animals" value = "Cow">Cow
+        <input type = "checkbox" name = "Animals" value = "Sheep">Sheep
+        <input type = "checkbox" name = "Animals" value = "Goat">Goat
+        <input type = "checkbox" name = "Animals" value = "Pig">Pig
+        <input type = "checkbox" name = "Animals" value = "Chicken">Chicken
+        <br>
+        <label>Date and Time</label>
+        <input type = "datetime-local" name = "datetime">
+        <br>
+        <Label>Comments</Label>
+        <input type = "text"  maxlength="20" >
+        <br>    
+        <input type = "submit" value = "Send Now">
+        <select type = "select"></select>
+    </form>
+    </main>
+
+    <footer>
+        @Fish Creek Animal Center 2024
+    </footer>
+
+    <h1 style =  "float:left;">Higher Education</h1>
+<h2 >Book System</h2>
+
+</body>
+
+</html>
